@@ -1,0 +1,88 @@
+<!--
+Wins: # of times the user has guessed the letter correctly
+
+Losses: # of times the user has failed to guess the letter correctly after exhausting all 9 guesses
+
+Guesses Left:9 guess displays, will update after each try; resets to 9 after the game ends with either a win or a loss for the user
+
+Your guesses so far: lists the specific letter that the user typed. Displays until the user either wins or loses.
+    
+step 1. Start of game:
+    A. Computer selected a letter for the game.
+
+    B. Have screen display all the text and the only entry is in Guesses Left which displays 9.
+
+step 2. list out users entries
+    A. program lists out letters selected in up to nine letters in the Your guesses so far section.
+
+step 3. Game compares entries to computer generated letter
+    A. If user's letter matches computer  player wins, 
+        1. Increase the Wins counter and 
+        2. Start the game over again without refreshing the page
+
+    B.  else user's uses up all 9 attempts with no match, player loses, 
+        1.  Increase the losses counter and 
+        2. Rrestart the game without a page refresh
+
+step 4. Restart game
+
+Functionality 
+1.click event needed to recognize the keyboard entries
+2. program that selects random letters
+3. For loop to match user sections to computer selection? when true it increase the score
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+
+<title>Psychic Game</title>
+</head>
+<body>
+    <h1>The Psychic Game</h1>
+
+    <div>Guess what letter I'm thinking of..</div>
+    <div class="random-letter">
+        <span class="random-letter"></span>
+          </div>
+          
+<br>
+
+    <div>Wins:</div>
+        <div id = "user_wins">
+            <span id="user_wins"></span>
+    </div>
+<br>
+
+    <div>Losses:</div>
+        <div id = "user_losses">
+            <span id="user_losses"></span>
+    </div>
+<br>
+
+    <div>Guesses Left:</div>
+        <div id = "userguesses">
+            <span id="userguesses"></span>
+    </div>
+<br>
+
+    <div>Your Guesses So Far:</div>
+    <div id = "user_guess_array">
+            <span id="user_guess_array"></span>
+    </div>
+    
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="game.js"></script>
+
+</body>
+</html>
